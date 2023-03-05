@@ -7,7 +7,7 @@ export const config = {
   api: {
     externalResolver: true,
     bodyParser: false,
-    runtime: "edge",
+    runtime: "experimental-edge",
   },
 };
 
