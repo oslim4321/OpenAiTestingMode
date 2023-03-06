@@ -26,9 +26,9 @@ const Stream = () => {
       setloading(false);
       return;
     }
+    console.log(res, "res");
 
     const reader = res.body.getReader();
-    // console.log(reader, "reader");
     const decoder = new TextDecoder();
     let responseText = "";
 
@@ -37,17 +37,22 @@ const Stream = () => {
         const { done, value } = await reader.read();
         if (done) break;
         responseText += decoder.decode(value, { stream: true });
-        // console.log(responseText, "responseText");
       }
-      setResponse(responseText);
-      //   const response = JSON.parse(responseText);
-      //   console.log(response, "response");
-      //
+      console.log(responseText);
+
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < responseText.length) {
+          setResponse((prevResponse) => prevResponse + responseText[i]);
+          i++;
+        } else {
+          clearInterval(timer);
+          setloading(false);
+        }
+      }, 50);
     } catch (error) {
       console.error("Failed to parse response from API", error);
     }
-
-    setloading(false);
   };
 
   return (
@@ -58,11 +63,10 @@ const Stream = () => {
         value={prompt}
         onChange={handleChange}
         style={{ padding: "20px" }}
-      />{" "}
+      />
       <button onClick={handleClick}>Fetch data</button>
       <p> {loading ? "loading..." : null}</p>
       <p>{response}</p>
-      {/* {response?.name} */}
     </>
   );
 };

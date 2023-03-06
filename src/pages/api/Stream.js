@@ -1,9 +1,5 @@
 import { OpenAIStream } from "../../utils/OpenAi";
 
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error("Missing env var from OpenAI");
-}
-
 export const config = {
   runtime: "edge",
 };
@@ -11,6 +7,7 @@ export const config = {
 export default async (req, res) => {
   const { prompt } = await req.json();
 
+  console.log(prompt);
   const question = "ok gist me am bored";
   if (!question) {
     return new Response("No prompt in  the request", { status: 400 });
