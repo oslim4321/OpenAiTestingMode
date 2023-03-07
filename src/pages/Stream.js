@@ -9,7 +9,7 @@ const Stream = () => {
     setprompt(
       `Generate professional text with no hashtags and clearly labeled "1)" and "2) also make sure you are not repeating your text it annoying". 
       Make sure each generated biography is less than 120 characters, 
-      has short sentences that are found in Twitter bios, and base them on this context ${event.target.value}`
+       and base them on this context ${event.target.value}`
     );
   };
 
