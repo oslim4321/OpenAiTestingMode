@@ -7,8 +7,8 @@ const Stream = () => {
 
   const handleChange = (event) => {
     setprompt(
-      `Generate professional text with no hashtags and clearly labeled "1)." and "2). also make sure you are not repeating your text it annoying". 
-      Make sure each generated biography is less than 50 characters, 
+      `Generate professional text with no hashtags and clearly labeled "1)" and "2) also make sure you are not repeating your text it annoying". 
+      Make sure each generated biography is less than 120 characters, 
       has short sentences that are found in Twitter bios, and base them on this context ${event.target.value}`
     );
   };
@@ -68,9 +68,7 @@ const Stream = () => {
         onChange={handleChange}
         style={{ padding: "20px" }}
       />
-      <button disabled={loading} onClick={handleClick}>
-        Fetch data
-      </button>
+      <button onClick={handleClick}>Fetch data</button>
       <p> {loading ? "loading..." : null}</p>
       {/* <p>{response}</p> */}
 
@@ -85,7 +83,7 @@ const Stream = () => {
                   key={generatedBio}
                   style={{ backgroundColor: "green", color: "white" }}
                 >
-                  <p>{generatedBio}</p>
+                  <p> {generatedBio}</p>
                 </div>
               );
             })}
