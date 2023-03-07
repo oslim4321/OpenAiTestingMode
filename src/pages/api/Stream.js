@@ -22,7 +22,7 @@ export default async (req, res) => {
     presence_penalty: 0,
     max_tokens: 200,
     stream: true,
-    n: 3,
+    n: 5,
   };
 
   const stream = await OpenAIStream(payload);

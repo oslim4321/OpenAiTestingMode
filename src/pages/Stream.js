@@ -6,7 +6,11 @@ const Stream = () => {
   const [loading, setloading] = useState(false);
 
   const handleChange = (event) => {
-    setprompt(event.target.value);
+    setprompt(
+      `Generate professional text with no hashtags and clearly labeled "1)." and "2). also make sure you are not repeating your text it annoying". 
+      Make sure each generated biography is less than 50 characters, 
+      has short sentences that are found in Twitter bios, and base them on this context ${event.target.value}`
+    );
   };
 
   const handleClick = async () => {
@@ -60,13 +64,46 @@ const Stream = () => {
       <h1>Stream</h1>
       <input
         type="text"
-        value={prompt}
+        // value={prompt}
         onChange={handleChange}
         style={{ padding: "20px" }}
       />
-      <button onClick={handleClick}>Fetch data</button>
+      <button disabled={loading} onClick={handleClick}>
+        Fetch data
+      </button>
       <p> {loading ? "loading..." : null}</p>
-      <p>{response}</p>
+      {/* <p>{response}</p> */}
+
+      <div>
+        {response &&
+          response
+            .substring(response.indexOf("1") + 3)
+            .split("2)")
+            .map((generatedBio) => {
+              return (
+                <div
+                  key={generatedBio}
+                  style={{ backgroundColor: "green", color: "white" }}
+                >
+                  <p>{generatedBio}</p>
+                </div>
+              );
+            })}
+
+        {/* <h2>Generate 2</h2>
+        {response &&
+          response
+            .split(/[\d]+\.\s+/)
+            .slice(1)
+            .map((generatedBio, index) => (
+              <div
+                key={index}
+                style={{ backgroundColor: "green", color: "white" }}
+              >
+                <p>{generatedBio}</p>
+              </div>
+            ))} */}
+      </div>
     </>
   );
 };

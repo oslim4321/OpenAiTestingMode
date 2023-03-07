@@ -7,6 +7,7 @@ export async function OpenAIStream(payload) {
   const decoder = new TextDecoder();
 
   let counter = 0;
+  const limit = payload.n;
 
   const res = await fetch(url, {
     headers: {
