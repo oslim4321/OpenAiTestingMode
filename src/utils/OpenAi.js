@@ -7,7 +7,6 @@ export async function OpenAIStream(payload) {
   const decoder = new TextDecoder();
 
   let counter = 0;
-  const limit = payload.n;
 
   const res = await fetch(url, {
     headers: {
@@ -21,6 +20,29 @@ export async function OpenAIStream(payload) {
   const stream = new ReadableStream({
     async start(controller) {
       // callback
+      //   function onParse(event) {
+      //     if (event.type === "event") {
+      //       const data = event.data;
+      //       if (data === "[DONE]") {
+      //         controller.close();
+      //         return;
+      //       }
+      //       try {
+      //         const json = JSON.parse(data);
+      //         console.log(json.choices.length, "json");
+      //         const text = json.choices[0].delta?.content || "";
+      //         if (counter < 2 && (text.match(/\n/) || []).length) {
+      //           return;
+      //         }
+      //         const queue = encoder.encode(text);
+      //         controller.enqueue(queue);
+      //         counter++;
+      //       } catch (e) {
+      //         // maybe parse error
+      //         controller.error(e);
+      //       }
+      //     }
+      //   }
       function onParse(event) {
         if (event.type === "event") {
           const data = event.data;
@@ -30,13 +52,12 @@ export async function OpenAIStream(payload) {
           }
           try {
             const json = JSON.parse(data);
-            const text = json.choices[0].delta?.content || "";
-            if (counter < 2 && (text.match(/\n/) || []).length) {
-              return;
+            // console.log(json.choices.length, "json");
+            for (let i = 0; i < json.choices.length; i++) {
+              const text = json.choices[i].delta?.content || "";
+              const queue = encoder.encode(text);
+              controller.enqueue(queue);
             }
-            const queue = encoder.encode(text);
-            controller.enqueue(queue);
-            counter++;
           } catch (e) {
             // maybe parse error
             controller.error(e);
