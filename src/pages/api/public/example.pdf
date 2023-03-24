@@ -1,0 +1,283 @@
+WEEK ONE
+HYPERTEXT MARKUP LANGUAGE (HTML)
+What You Will Learn
+MODULE 1: INTRODUCTION
+History of the Internet and the World Wide Web
+Definition of types of Apps (Native Apps/Web App/Websites)
+Breakdown of Web Development Components (Frontend and Backend)
+Web Development Tools Installation and setups (Browsers, Text Editors)
+MODULE 2: HTML BASICS
+History and Development of HTML, Versions
+HTML Syntax, Semantic HTML
+Terminologies, Files, Folders
+Tree Structure, Nesting and Indentation
+Starting a website, HTML coding
+Commenting(how to and purpose)
+MODULE 3: HTML TEXT FORMATTING TAGS
+Common HTML TAGS
+Header Tags,Bold,Strong,Italics,insert,delete,
+block level elements,inline level elements,Emphasis,paragraph,
+Quote,Marquee,sub,sup,div,span,css background color,color,text align
+Headings, Paragraphs, Bold, Italic, Emphasis, Quote, Cite, Marquee, etc
+Lists (ordered, unordered,descriptive,nested)
+How web pages are linked using Anchor tags
+Commenting
+MODULE 4: HTML MULTIMEDIA
+Adding Images (src,width,height,alt
+Audio(src,controls,autoplay,loop)
+Video files (src,controls,autoplay,loop)
+Youtube Video Embedding using Iframe
+How to download multimedia content from a page using anchor tag
+Frame Tag
+MODULE 5: HTML FORMS
+Form Inputs, Input types and attributes
+(Form, Fieldset, Legend, Input
+Types(text(properties):placeholder,maxlength,minlength,required)
+Other Input Types(number,email,password,date,month,time,range,color,file,
+radio,checkbox,reset)
+Select and Option
+Text Area
+Button, input (type:submit), input(type:button)
+HTML Form Control
+` Form Tag Action and Method
+MODULE 6: HTML TABLES
+Tables, rows, and column
+Rowspanning and Colspanning
+PROJECT EXAMPLES:
+Google Logo Design, Letter to a friend, Blog Post, Portfolio, Booking
+Form(e.g. wakanow.com), CBT Exam, Chess Board,Ludo Board,Scrabble Board.
+WEEK TWO - THREE
+CASCADING STYLE SHEET (CSS)
+What You Will Learn
+MODULE 1: INTRODUCTION TO CSS
+The power of CSS in web design
+History of CSS, Versions, Vendor Prefixes
+How does CSS look like (CSS Syntax)
+Methods of linking HTML and CSS together
+Definition: Selectors, Properties, Values, and Units
+MODULE 2: CSS BOX MODEL
+Passing Borders, Margin, and Padding to HTML Tags
+Specifying height and width for HTML elements
+Scope/Level of HTML elements (Block and Inline)
+Background Images, Background Colors, Gradients, Box Shadow
+MODULE 3: CSS TEXT FORMATTING
+Font-families (generic, Font Names)
+Web-safe fonts, Font fallbacks (font stack)
+Font CDN (Google Fonts, Adobe Fonts)
+Font size, Font style, Font Weights, Color
+Text transform, text-indent, text stroke, text-shadow
+Text decoration, line height, letter spacing, word spacing, etc
+MODULE 4: WEB PAGE LAYOUT
+Floats, Tables,
+The Display property (inline, block, inline-block, flex, grid)
+Positions (static, sticky, fixed, relative, and absolute)
+Structuring Web page using Flexbox
+Structuring Web page using Grid
+MODULE 5: CSS 3 CORE
+Transforms (rotate, skew, translate and scale)
+Transition, Animations, Clipath, Filters
+MODULE 6: RESPONSIVE WEB DESIGN
+How to design a website that behaves well on all screens (phone, tablet and
+desktop) using media queries,
+Feature Queries
+Styling for print
+Click here to see available useful course materials for further reading
+PROJECT EXAMPLES : Printivo, SQI Landing Page, WPS OFFICE Download Page,
+WEEK FOUR
+SYNTACTICALLY AWESOME STYLESHEET (SASS)
+What You Will Learn
+MODULE 1: INTRODUCTION TO SASS
+Definition: Preprocessors
+Sass Installation, variants
+Sass Basics (Variables, Map, Nesting, partials, @import, @mixin, @include,
+@extend)
+MODULE 2: SASS FUNCTIONS
+Mixins, Color Functions, Lists,
+Sass Selectors, Sass String, Math Function
+Introspection, conditional statements (@if, @each, etc)
+MODULE 3: APPLICATION
+Creating your first portfolio using sass
+Customizing Bootstrap with Sass
+WEEK FOUR - FIVE
+BOOTSTRAP CSS
+What You Will Learn
+MODULE 1: INTRODUCTION TO BOOTSTRAP CSS
+History of Bootstrap CSS, Versions
+How is Bootstrap different from conventional CSS
+Bootstrap Installation, Download, CDN
+Bootstrap Basic Examples
+MODULE 2: BOOTSTRAP UTILITIES AND TYPOGRAPHY
+Reboot, Typography, Images, Tables
+Figures, Background, Borders, Colors
+Display, Flex, Float, Interactions
+Overflow, Position, Shadows, Sizing,
+Spacing, Text, Vertical align, Visibility
+MODULE 3: BOOTSTRAP COMPONENTS
+Accordion, Alerts, Badge, Breadcrumb
+Buttons, Button group, Card, Carousel
+Close button. Collapse, Dropdowns
+List group, Modal, Navs & tabs
+Navbar, Pagination, Popovers
+Progress, Scrollspy, Spinners
+Toasts, Tooltips
+MODULE 4: BOOTSTRAP LAYOUT
+Breakpoints, Bootstrap Containers classes
+Making Web Layout using Bootstrap Grid System
+Columns, Gutters, Utilities, Z-index
+MODULE 5: BOOTSTRAP FORMS
+Overview, Form control, Select,
+Checks & radios, Range, Input group
+Floating labels, Form Layout, Form Validation
+MODULE 6: PUTTING IT TOGETHER
+Build a responsive modern website using Bootstrap
+TAILWIND CSS
+What You Will Learn
+MODULE 1: INTRODUCTION TO TAILWIND CSS
+History of Tailwind css
+How is Tailwind different from conventional CSS and Bootstrap
+Tailwind Installation, Download, CDN
+Bootstrap Basic Examples
+MODULE 2: CUSTOMIZATION AND LAYOUT
+Breakpoints, Colors, Spacing, Variants etc
+Container, Box Decoration Break, Box Sizing
+Display, Floats, Clear, Isolation, Object Fit,
+Object position, Overflow, Overscroll Behavior,
+Positon, Visibility, Z-index, Top/Right/Bottom/Left
+MODULE 3: FLEXBOX AND GRID
+Flex Direction, Flex Wrap, Flex, Flex Grow
+Flex Shrink. Order, Grid Template Columns
+Grid Row Start / End, Grid Auto flow
+Grid Auto Columns, Grid Auto Rows
+Gap, Justify Content, Justify Items
+Justify Self, Align Content, Align Items
+Align Self, Place Content, Place items, Place Self
+MODULE 4: SPACING AND SIZING
+Padding Margin, Space Between
+Width, Min-Width, Max-Width
+Height, Min-Height, Max-Height
+MODULE 5: TYPOGRAPHY
+Font Family, Font Size, Font Smoothing, Font Style
+Font Weight, Font Variant Numeric, Letter Spacing
+Line Height, List Style Type, List Style Position
+Placeholder Color, Placeholder Opacity, Text Align
+Text Color, Text Opacity, Text Decoration, Text Transform
+Text Overflow, Vertical Align. Whitespace, Word Break
+MODULE 6: BACKGROUNDS & EFFECTS
+Background Attachment, Background Clip, Background Color
+Background Opacity, Background Origin, Background Position
+Background Repeat, Background Size, Background Size
+Background Image, Gradient Color Stops, Box Shadow
+Opacity, Mix Blend Mode, Background Blend Mode
+MODULE 7: BORDERS & TABLE
+Border Radius, Border Width, Border Color, Border Opacity
+Border Style, Divide Width, Divide Color, Divide Opacity
+Divide Style, Ring Width, Ring Color, Ring Opacity
+Ring Offset Width, Ring Offset Color,Border Collapse, Table Layout
+MODULE 8: TRANSITIONS AND TRANSFORMS
+Transition Property, Transition Duration, Transition Timing Function
+Transition Delay, Animation, Transform, Transform Origin
+Scale, Rotate, Translate, Skew
+GIT(LOCAL GIT)
+What You Will Learn
+MODULE 1: INTRODUCTION TO GIT
+History of Git (Global Information Tracker) and GitHub
+Types of Version Control Systems (Distributed and Centralized)
+What is it used for :
+- Collaboration
+- Version Control History
+- Portfolio
+- Open Source
+- Backup
+- Remote
+Git Installation and set up
+MODULE 2: GIT SETUP, INIT, STAGE AND SNAPSHOT
+git init,
+git config(username and email)
+Stages in git
+git add,
+git rm – cached nameoffile
+git commit
+git log
+git status,
+git diff,
+git reset
+MODULE 3: GIT BRANCH, MERGE AND IGNORE
+Using touch to create files
+.gitignore(how to ignore files)
+git branch: how to create a branch, what it means.
+git checkout
+git merge
+How to work in a branch etc (checkout into a branch) etc.
+Providing a copy of git cheat sheet
+Note: There is more to git!!. Thanks!!!
+HOSTING AND DEPLOYMENT
+What You Will Learn
+MODULE 1: HOSTING AND DEPLOYMENT
+Definition of common terms (Hosting, Deployment, Domain Name, Servers).
+Deploying to any hosting platform. netflify.com is advised.
+Changing domain names and deleting deployments.
+How to redeploy an already deployed app
+Providing a list of free and paid hosting platforms.
+List of sites
+Paid:
+1. Namecheap
+2. Qservers
+3. Godaddy
+4. Whogohost
+5. Bluehost
+6. hostinger
+Free:
+1. 000webhost
+2. infinityfree
+3. netlify
+4. Firebase
+5. GitHub pages
+6. Heroku
+DOCUMENTATION
+What You Will Learn
+MODULE 1: DOCUMENTATION
+Definition and importance of documentation
+Rules of documentation (clarity,sectioning etc)
+Making use of comments in documentation
+What is API and API documentation
+Examples of REST APIs one can use
+rapidapi.com (gives access to thousands of APIs)
+openweathermap.org,
+jsonplaceholder.typicode.com,
+api.github.com/users
+state and capital,
+map,signin with other services
+Crypto API
+News API,
+https://nigerian-states-info.herokuapp.com/api/v1/states/lagos
+https://github.com/public-apis/public-apis
+Common Examples of Documentation (Paystack,Bootstrap,Laravel)
+Using Postman for requests
+Endpoints
+An overview of projects done by students using API
+Links to the project :
+https://michael-all-countries.netlify.app/
+http://complicated.netlify.app
+https://windyway.netlify.app/
+https://smart-empire-weather-app.netlify.app/
+http://waasura.netlify.app
+https://novaflix.vercel.app/
+PROSPECT WEEK
+What You Will Learn
+MODULE 1: PROSPECT WEEK
+Prospect week aims to bridge the gap between students who do not know the various
+paths available in the tech world. The aim is to explain what each path entails if they
+choose to follow any. The current paths we have at SQI College of ICT are :
+1. Data Science
+2. Robotics
+3. Web Application Development
+4. Cyber Security
+5. Native Application Development
+6. UI/UX Developer
+We should also highlight the levels and amount it will cost and the things they will be
+able to do by the end of such courses.
+A day will be used to discuss other important things such as communication skills,
+writing skills,ethical behaviors(dressing, punctuality, humility), social media presence,
+being a brand, Affiliation with SQI College of ICT,screen recording, screenshots. It will also
+be to encourage them on their journey as it will not exactly be easy, but learning to
+become a world-class professional is not exactly easy either but it is quite rewarding.
