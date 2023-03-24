@@ -87,7 +87,7 @@ export default async function handler(req, res) {
     const data = await response.json();
     const answer = data.choices[0].text.trim();
 
-    console.log(`Q: ${question}\nA: ${answer}\n`);
+    // console.log(`Q: ${question}\nA: ${answer}\n`);
     res.json({ answer: `Q: ${question}\nA: ${answer}\n` });
   }
 

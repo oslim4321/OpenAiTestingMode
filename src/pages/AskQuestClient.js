@@ -2,8 +2,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-  const [answer, setAnswer] = useState("");
-  const [question, setQuestion] = useState("");
+  const [questionList, setQuestionList] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,8 +15,17 @@ export default function Home() {
     });
     const { answer } = await response.json();
     const [q, a] = answer.split("A:");
-    setQuestion(q);
-    setAnswer(a);
+    console.log(answer, "me");
+    setInputValue("");
+    if (answer) {
+      setQuestionList([
+        ...questionList,
+        {
+          question: q,
+          answer: a,
+        },
+      ]);
+    }
   };
 
   const handleChange = (event) => {
@@ -26,24 +34,27 @@ export default function Home() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Ask a question:
-          <textarea
-            cols="30"
-            rows="10"
-            value={inputValue}
-            onChange={handleChange}
-          ></textarea>
-        </label>
+      <div style={{ marginBottom: "15%" }}>
+        {questionList.map((questAnswer, index) => (
+          <div key={index} className="qa-box">
+            <div className="question">{questAnswer.question}</div>
+            <div className="answer">
+              <div>{questAnswer.answer}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <form onSubmit={handleSubmit} className="formInp">
+        {/* <label>Ask a question:</label> */}
+        <input
+          type="text"
+          onChange={handleChange}
+          value={inputValue}
+          className="textArea"
+        />
         <button type="submit">Submit</button>
       </form>
-      {question && (
-        <div>
-          <h2>Question: {question}</h2>
-          <h2>Answer: {answer}</h2>
-        </div>
-      )}
     </div>
   );
 }
