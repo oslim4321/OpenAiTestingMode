@@ -3,9 +3,13 @@ import { useState } from "react";
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [questionList, setQuestionList] = useState([]);
+  const [loading, setloading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setloading(true);
+    setInputValue("");
+
     const response = await fetch("/api/AskQuest", {
       method: "POST",
       body: JSON.stringify({ question: inputValue }),
@@ -16,8 +20,9 @@ export default function Home() {
     const { answer } = await response.json();
     const [q, a] = answer.split("A:");
     console.log(answer, "me");
-    setInputValue("");
+
     if (answer) {
+      setloading(false);
       setQuestionList([
         ...questionList,
         {
@@ -26,6 +31,7 @@ export default function Home() {
         },
       ]);
     }
+    setloading(false);
   };
 
   const handleChange = (event) => {
@@ -39,7 +45,15 @@ export default function Home() {
           <div key={index} className="qa-box">
             <div className="question">{questAnswer.question}</div>
             <div className="answer">
-              <div>{questAnswer.answer}</div>
+              {loading ? (
+                "loading..."
+              ) : (
+                <div>
+                  {questAnswer.answer.split(/,\s*/).map((elem) => (
+                    <div>{elem}</div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -53,7 +67,11 @@ export default function Home() {
           value={inputValue}
           className="textArea"
         />
-        <button type="submit">Submit</button>
+        {loading ? (
+          <button>Loading...</button>
+        ) : (
+          <button type="submit">Submit</button>
+        )}
       </form>
     </div>
   );
