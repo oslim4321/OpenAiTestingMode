@@ -2,7 +2,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-  const [answer, setanswer] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [question, setQuestion] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,8 +15,9 @@ export default function Home() {
       },
     });
     const { answer } = await response.json();
-    setanswer(answer);
-    console.log(answer); // Do something with the answer
+    const [q, a] = answer.split("A:");
+    setQuestion(q);
+    setAnswer(a);
   };
 
   const handleChange = (event) => {
@@ -27,11 +29,21 @@ export default function Home() {
       <form onSubmit={handleSubmit}>
         <label>
           Ask a question:
-          <input type="text" value={inputValue} onChange={handleChange} />
+          <textarea
+            cols="30"
+            rows="10"
+            value={inputValue}
+            onChange={handleChange}
+          ></textarea>
         </label>
         <button type="submit">Submit</button>
-        <p>{answer && answer}</p>
       </form>
+      {question && (
+        <div>
+          <h2>Question: {question}</h2>
+          <h2>Answer: {answer}</h2>
+        </div>
+      )}
     </div>
   );
 }
